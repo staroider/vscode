@@ -15,7 +15,8 @@ spec:
       containers:
       - name: code-server
         image: codercom/code-server
-        args: ["--auth", "none"]
+        command: ["/usr/local/bin/code-server"]
+        args: ["--host", "0.0.0.0", ".", "--auth", "none"]
 ---
 kind: Service
 apiVersion: v1
