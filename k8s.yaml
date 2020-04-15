@@ -17,6 +17,8 @@ spec:
         image: codercom/code-server
         command: ["/usr/local/bin/code-server"]
         args: ["--host", "0.0.0.0", ".", "--auth", "none"]
+        securityContext:
+          runAsUser: 1000
 ---
 kind: Service
 apiVersion: v1
