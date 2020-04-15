@@ -1,0 +1,8 @@
+apiVersion: beta/v1
+deploy:
+  skaffold: {}
+ingress:
+- service: code-server
+  port: 8080
+release:
+  rate: 1.0

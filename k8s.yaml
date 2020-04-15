@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: code-server-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: code-server
+  template:
+    metadata:
+      labels:
+        app: code-server
+    spec:
+      containers:
+      - name: code-server
+        image: codercom/code-server
+        args: ["--auth", "none"]
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: code-server
+spec:
+  ports:
+  - name: http
+    port: 8080
+  selector:
+    app: code-server
