@@ -2,7 +2,7 @@
 
 Run VS Code on the Cloud. Fork and customize as much as you want!
 
-
+### [Click here to Launch on Staroid!](https://preview.staroid.com/g/staroider/vscode)
 
 ## Branch
 
